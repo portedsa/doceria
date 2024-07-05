@@ -1,0 +1,311 @@
+<?php
+session_start();
+$loginLink = isset($_SESSION['email']) ? 'clientelogado1.php' : 'login.php';
+?php>
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" href="./imagens/logotipos/Delicias da vó Rita pintadp.png">
+
+    <title>Doces Rita</title>
+    <script src="./loja.js" async></script>
+</head>
+
+<body>
+    <header class="content">
+
+        <div class="logo">
+            <img src="./imagens/logotipos/Delicias vovó Rita redondo.png" alt="">
+            <h3>DocesRita</h3>
+        </div>
+
+        <nav>
+            <ul class="list-menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#sobrenos">sobre nos</a></li>
+                <li><a href="#doce">Doces</a></li>
+                <li><a href="#contatos">contatos</a></li>
+                <li><a href= "login.html"><i class="bi bi-person-circle"></i></a></li>
+                <li><a href="#container normal-section"><i class="bi bi-bag"></i></a></li>
+
+                <li><a href="https://www.instagram.com/delicias_da_vo_rita_/" target="_blank"><i
+                            class="bi bi-instagram"></i></a></i></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+
+
+
+
+
+
+        </div>
+    </header>
+
+    <section class="firt-section">
+        <div class="conteudo-principal">
+            <h1>Deixe seu dia mais DOCE!!!</h1>
+            <h2>Os doces mais saborosos da regiao</h2>
+            <div class="btn">
+                <a href="https://wa.me/5551994446428" target="_blank" rel="nooperner"> <button
+                        class="reserva">Encomende</button></a>>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+    </section>
+
+    <section class="sobrenos" id="sobrenos">
+
+        <div class="main">
+
+            <div class="contentsobre">
+
+                <h2>sobre nos</h2>
+                <p>Começando em um sonho de tentar recriar as receitas
+                    da avó, demonstrou-se um talento e vontade de por meio
+                    de uma receita alcançar o coraçao de cada um para sentir o
+                    conforto de um abraço de uma avó, buscamos primariamente isso
+                    ou seja prezamos qualida e beleza ate no mais simples bolo,
+                    nos da Doces Rita homenageamos a avó da proprietaria quanto
+                    todas as avó de todos pois carinho de vó sempre sera doce.</p>
+
+
+            </div>
+            <div class="imgcozinha">
+
+                <img src="./imagens/fotoparaosobre.jpg" alt="erro" class="img-cozinha">
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </section>
+
+
+    <section class="doce" id="doce">
+
+
+        <h2>Doces</h2>
+
+        <div class="intens-doces">
+
+
+            <div class="produto">
+                <img src="./imagens/comidas dos produtos/pudim.jpg" alt="" class="produto-imagem">
+                <div class="info">
+
+                    <h3 class="titulo-produto">Pudim</h3>
+                    <h4>Pudim inteiro tamanho medio<span class="Preço-produto">R$85,00</span></h4>
+                    <button class="pedir">Comprar</button>
+                </div>
+
+
+
+            </div>
+
+            <div class="produto">
+                <img src="./imagens/comidas dos produtos/bolonopote.jpg" alt="" class="produto-imagem">
+                <div class="info">
+
+                    <h3 class="titulo-produto">Bolo no Pote</h3>
+                    <h4>pote de 600ml<span class="Preço-produto">R$19,00</span></h4>
+                    <button type="button" class="pedir">Comprar</button>
+
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+            <div class="produto">
+                <img src="./imagens/comidas dos produtos/brigadeiro.jpg" alt="Brigadeiro de Chocolate"
+                    class="produto-imagem">
+                <div class="info">
+                    <h3 class="titulo-produto">Caixa de Brigadeiro de Chocolate</h3>
+                    <h4>Caixa com 20 unidades<span class="Preço-produto">R$70,00</span></h4>
+                    <button class="pedir">Adicionar ao carrinho</button>
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+    <section class="container normal-section">
+        <h2 class="section-title">Carrinho</h2>
+
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th class="table-head-item first-col">Item</th>
+                    <th class="table-head-item second-col">Preço</th>
+                    <th class="table-head-item third-col">Quantidade</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- <tr class="cart-product">
+          <td class="product-identification">
+            <img src="images/produto2.png" alt="Miniatura" class="cart-product-image">
+            <strong class="cart-product-title">Miniatura</strong>
+          </td>
+          <td>
+            <span class="cart-product-price">R$69,90</span>
+          </td>
+          <td>
+            <input type="number" value="2" min="0" class="product-qtd-input">
+            <button type="button" class="remove-product-button">Remover</button>
+          </td>
+        </tr>
+        <tr class="cart-product">
+          <td class="product-identification">
+            <img src="images/poster3.png" alt="Poster 3" class="cart-product-image">
+            <strong class="cart-product-title">Poster 3</strong>
+          </td>
+          <td>
+            <span class="cart-product-price">R$19,99</span>
+          </td>
+          <td>
+            <input type="number" value="1" min="0" class="product-qtd-input">
+            <button type="button" class="remove-product-button">Remover</button>
+          </td>
+        </tr> -->
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="cart-total-container">
+                        <strong>Total</strong>
+                        <span>R$0,00</span>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <button type="button" class="purchase-button">Finalizar Compra</button>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="Contatos" id="contatos">
+        <h3>Contatos</h3>
+        <div class="contatos-secao">
+            <div>
+
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span>(51)98888-8856</span>
+            </div>
+            <div>
+
+                <i class="bi bi-instagram"></i>
+                <a href="https://www.instagram.com/delicias_da_vo_rita_/" target="_blank">@delicias_da_vo_rita_</a>
+            </div>
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+    <footer>
+        <h4>Desenvolvido por gustavo medeiros</h4>
+    </footer>
+
+
+
+
+
+    <script src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>
